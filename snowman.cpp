@@ -111,90 +111,14 @@ namespace ariel{
 
     string snowman(int x)
     {
-        
-        
-        const int ten=10;
-        const int hundred=100;
-        const int thousend=1000;
-        
-
         //check if the input is valid
         checkValidInput(x);
-        // const int eight=8;
-        // const int four=4;
-        // for(int i=0;i<eight;i++)
-        // {
-        //     if(temp%ten>four||temp%ten<1)
-        //     {
-        //         throw invalid_argument("invalid input");
-        //     }
-        //     temp=temp/ten;
-        // }
-        // if(temp!=0)
-        // {
-        //     throw invalid_argument("invalid input");
-        // }
-
-
-        
-       
         int isRightArmUp=checkRightHandUp(x);
         int isLeftArmUp=checkLeftHandUp(x);
-        // if((x/hundred)%ten==2)
-        // {
-        //     isRightArmUp=true;
-        // }
-        //  if((x/(thousend))%ten==2)
-        // {
-        //     isLeftArmUp=true;
-        // }
-
-
+        
         //build the snowman
-        string s;
-        s=Hat(x)+head(x, isLeftArmUp, isRightArmUp)+body(x, isLeftArmUp, isRightArmUp)+Base(x);
-        // s=s+hat.at((x/(ten*thousend*thousend))-1);
-        // if(isLeftArmUp)
-        // {
-        //     s=s+leftArm.at(1);
-        // }
-        // else{
-        //     s=s+" ";
-        // }
-        // s=s+"("+leftEye.at(((x/(hundred*thousend))%ten)-1);
-        // s=s+nose.at(((x/(thousend*thousend))%ten)-1);
-        // s=s+rightEye.at(((x/(ten*thousend))%ten)-1)+")";
-        // if(isRightArmUp)
-        // {
-        //     s=s+rightArm.at(1)+"\n";
-        // }
-        // else{
-        //     s=s+"\n";
-        // }
-        // if(!isLeftArmUp)
-        // {
-        //     s=s+leftArm.at(((x/(thousend))%ten)-1);
-        // }
-        // else{// add " "before the torso
-        //     s=s+" ";
-        // }
-        // s=s+torso.at(((x/ten)%ten)-1);
-        // if(!isRightArmUp)
-        // {
-        //     s=s+rightArm.at(((x/hundred)%ten)-1)+"\n";
-        // }
-        // else
-        // {
-        //     s=s+"\n";
-        // }
-        // s=s+" "+base.at((x%ten)-1);
+        string s=Hat(x)+head(x, isLeftArmUp, isRightArmUp)+body(x, isLeftArmUp, isRightArmUp)+Base(x);
         return s;
     }
 }
-
-// int main(int argc, char const *argv[])
-// {
-//     ariel::snowman(11111111);
-//     return 0;
-// }
 
